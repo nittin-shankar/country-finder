@@ -1,5 +1,5 @@
 defmodule CountryFinder.CountryClientBehaviour do
 
-  @callback all_countries() :: tuple()
+  @callback all_countries() :: {:ok, %Finch.Response{}}
 
 end
