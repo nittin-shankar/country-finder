@@ -19,6 +19,7 @@ defmodule CountryFinder do
         body
         |> Jason.decode!()
         |> maps_to_structs()
+
       _ ->
         :error
     end
@@ -39,9 +40,6 @@ defmodule CountryFinder do
         capital: capital,
         population: population
       }
-
     end)
   end
-
-
 end

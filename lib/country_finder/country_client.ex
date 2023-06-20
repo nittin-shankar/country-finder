@@ -5,5 +5,4 @@ defmodule CountryFinder.CountryClient do
     url = "https://restcountries.com/v3.1/all?fields=flags,name,population,region,capital"
     Finch.build(:get, url) |> Finch.request(CountryFinder.Finch)
   end
-
 end

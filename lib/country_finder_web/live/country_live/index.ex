@@ -10,6 +10,4 @@ defmodule CountryFinderWeb.CountryLive.Index do
   def handle_event("search-country", _params, socket) do
     {:noreply, socket}
   end
-
-
 end
