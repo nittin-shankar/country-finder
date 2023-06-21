@@ -3,7 +3,13 @@ defmodule CountryFinderWeb.CountryLive.Index do
 
   @impl true
   def mount(_params, _session, socket) do
-    {:ok, socket}
+    countries = CountryFinder.all_countries()
+
+    {:ok,
+      socket
+      |> stream_configure(:countries, dom_id: &(&1.name))
+      |> stream(:countries, countries)
+    }
   end
 
   @impl true

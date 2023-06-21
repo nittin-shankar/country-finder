@@ -15,6 +15,8 @@ module.exports = {
     extend: {
       colors: {
         brand: "#FD4F00",
+        veryLightGray: "hsl(0, 0%, 98%)",
+        LightModeVeryDarkBlue: "hsl(200, 15%, 8%)"
       }
     },
   },
