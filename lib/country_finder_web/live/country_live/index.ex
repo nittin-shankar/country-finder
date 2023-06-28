@@ -6,10 +6,9 @@ defmodule CountryFinderWeb.CountryLive.Index do
     countries = CountryFinder.all_countries()
 
     {:ok,
-      socket
-      |> stream_configure(:countries, dom_id: &(&1.name))
-      |> stream(:countries, countries)
-    }
+     socket
+     |> stream_configure(:countries, dom_id: & &1.name)
+     |> stream(:countries, countries)}
   end
 
   @impl true

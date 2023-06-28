@@ -15,8 +15,12 @@
   </div>
 </form>
 
-<div id="countries" phx-update="stream" class="mt-8 grid grid-cols-4 gap-16 text-LightModeVeryDarkBlue">
-  <div class="col-span-1 flex" :for={{_dom_id, country} <- @streams.countries}>
-      <CountryFinderWeb.CountryComponents.card country={country}/>
+<div
+  id="countries"
+  phx-update="stream"
+  class="mt-8 grid grid-cols-4 gap-16 text-LightModeVeryDarkBlue"
+>
+  <div :for={{_dom_id, country} <- @streams.countries} class="col-span-1 flex">
+    <CountryFinderWeb.CountryComponents.card country={country} />
   </div>
 </div>
