@@ -31,8 +31,8 @@ defmodule CountryFinder do
       flag_png = get_in(country_map, ["flags", "png"])
       region = country_map["region"]
       capital = country_map["capital"]
-      population = add_comma(country_map["population"])
-      country_code = get_in(country_map, ["cca3"])
+      population = country_map["population"]
+      country_code = country_map["cca3"]
 
       %Country{
         name: name,
@@ -45,7 +45,7 @@ defmodule CountryFinder do
     end)
   end
 
-  def add_comma(integer) do
+  def format_population(integer) do
     integer
     |> Integer.to_charlist()
     |> Enum.reverse()
