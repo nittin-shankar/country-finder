@@ -11,8 +11,8 @@ defmodule CountryFinderWeb.CountryComponents do
   def card(assigns) do
     ~H"""
     <div class="shadow-sm rounded-md w-full bg-white">
-      <.link patch={~p"/#{@country.name}"}>
-        <img class="aspect-[16/9] rounded-t-md w-full object-cover" src={@country.flag_png} alt="">
+      <.link patch={~p"/#{@country.country_code}"}>
+        <img class="aspect-video rounded-t-md w-full object-cover" src={@country.flag_png} alt="">
         <div class="p-5">
           <h3 class="text-lg font-semibold"><%= @country.name %></h3>
 
