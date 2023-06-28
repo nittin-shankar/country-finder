@@ -45,6 +45,15 @@ defmodule CountryFinder do
     end)
   end
 
+  @doc """
+     This function is to add comma every 3 digits of a integer from the right.
+
+     Integer.to_charlist() -> Converting integer to charlist as Enum.reverse expects list of intger.
+     Enum.reverse() -> Enum.join() will add comma from the left, but we want to add comma from the right,so that we are using Enum.reverse() hear.
+     Enum.chunk_every(3) -> Chunk every 3 digits.
+     Enum.join(",") -> Using "," in order to add comma.
+     String.reverse() -> Finally reversing the order.
+  """
   def format_population(integer) do
     integer
     |> Integer.to_charlist()
