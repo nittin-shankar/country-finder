@@ -1,9 +1,17 @@
 defmodule CountryFinderWeb.CountryLive.Index do
   use CountryFinderWeb, :live_view
 
+  alias CountryFinder
+
   @impl true
   def mount(_params, _session, socket) do
-    {:ok, socket}
+    countries = CountryFinder.all_countries()
+    {:ok,
+    socket
+    |> stream_configure(:countries, dom_id: &("countries-#{&1.name}"))
+    |> stream(:countries, countries)
+  }
+
   end
 
   @impl true

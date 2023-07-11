@@ -4,7 +4,8 @@ defmodule CountryFinder.Country do
     :flag_png,
     :region,
     :capital,
-    :population
+    :population,
+    :country_alpha_code
   ]
 
   defstruct [
@@ -12,6 +13,7 @@ defmodule CountryFinder.Country do
     :flag_png,
     :region,
     :capital,
-    :population
+    :population,
+    :country_alpha_code
   ]
 end
