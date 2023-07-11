@@ -42,10 +42,14 @@ defmodule CountryFinder do
         population: population,
         country_alpha_code: country_alpha_code
       }
-
     end)
   end
 
+
+
+  @moduledoc """
+  Formats a number by adding commas as thousands separators.
+  """
   def format_number(number) do
     number
     |> Integer.to_charlist
@@ -54,4 +58,5 @@ defmodule CountryFinder do
     |> Enum.join(",")
     |> String.reverse
   end
+
 end

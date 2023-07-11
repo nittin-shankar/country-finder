@@ -18,7 +18,7 @@ defmodule CountryFinderWeb.CountryComponents do
 
           <div class="py-2 flex flex-col gap-y-0.5">
             <div>
-              <span class="font-medium">Population: </span><%= @country.population %>
+              <span class="font-medium">Population: </span><%= CountryFinder.format_number(@country.population) %>
             </div>
             <div>
               <span class="font-medium">Region: </span><%= @country.region %>

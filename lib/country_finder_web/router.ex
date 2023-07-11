@@ -20,7 +20,6 @@ defmodule CountryFinderWeb.Router do
     # get "/", PageController, :home
 
     live "/", CountryLive.Index, :home
-    live "/code", CountryLive.Show, :show
 
   end
 
