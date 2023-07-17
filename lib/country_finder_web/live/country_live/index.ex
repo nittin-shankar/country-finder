@@ -1,6 +1,8 @@
 defmodule CountryFinderWeb.CountryLive.Index do
   use CountryFinderWeb, :live_view
 
+  alias CountryFinder
+
   @impl true
   def mount(_params, _session, socket) do
     countries = CountryFinder.all_countries()

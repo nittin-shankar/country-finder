@@ -32,14 +32,31 @@ defmodule CountryFinder do
       region = country_map["region"]
       capital = country_map["capital"]
       population = country_map["population"]
+      country_alpha_code = country_map["cca3"]
 
       %Country{
         name: name,
         flag_png: flag_png,
         region: region,
         capital: capital,
-        population: population
+        population: population,
+        country_alpha_code: country_alpha_code
       }
     end)
   end
+
+
+
+  @moduledoc """
+  Formats a number by adding commas as thousands separators.
+  """
+  def format_number(number) do
+    number
+    |> Integer.to_charlist
+    |> Enum.reverse
+    |> Enum.chunk_every(3, 3, [])
+    |> Enum.join(",")
+    |> String.reverse
+  end
+
 end

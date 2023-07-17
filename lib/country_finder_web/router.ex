@@ -20,6 +20,7 @@ defmodule CountryFinderWeb.Router do
     # get "/", PageController, :home
 
     live "/", CountryLive.Index, :home
+
   end
 
   # Other scopes may use custom stacks.
