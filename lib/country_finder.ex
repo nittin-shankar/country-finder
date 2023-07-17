@@ -14,7 +14,9 @@ defmodule CountryFinder do
   Returns a list of country structs
   """
   def all_countries() do
-    case CountryClient.all_countries() do
+    countries = country_client().all_countries()
+
+    case countries do
       {:ok, %Finch.Response{status: 200, body: body}} ->
         body
         |> Jason.decode!()
@@ -57,6 +59,10 @@ defmodule CountryFinder do
     |> Enum.chunk_every(3, 3, [])
     |> Enum.join(",")
     |> String.reverse
+  end
+
+  defp country_client() do
+    Application.get_env(:country_finder, :country_client_module)
   end
 
 end

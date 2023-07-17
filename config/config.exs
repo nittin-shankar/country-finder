@@ -29,6 +29,9 @@ config :country_finder, CountryFinderWeb.Endpoint,
 # at the `config/runtime.exs`.
 config :country_finder, CountryFinder.Mailer, adapter: Swoosh.Adapters.Local
 
+config :country_finder,
+  country_client_module: CountryFinder.CountryClient
+
 # Configure esbuild (the version is required)
 config :esbuild,
   version: "0.17.11",
