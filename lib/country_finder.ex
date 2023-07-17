@@ -47,7 +47,7 @@ defmodule CountryFinder do
 
 
 
-  @moduledoc """
+  @doc """
   Formats a number by adding commas as thousands separators.
   """
   def format_number(number) do
