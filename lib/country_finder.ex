@@ -46,13 +46,13 @@ defmodule CountryFinder do
   end
 
   @doc """
-     This function is to add comma every 3 digits of a integer from the right.
+     Formats the given integer with thousands separator
 
-     Integer.to_charlist() -> Converting integer to charlist as Enum.reverse expects list of intger.
-     Enum.reverse() -> Enum.join() will add comma from the left, but we want to add comma from the right,so that we are using Enum.reverse() hear.
-     Enum.chunk_every(3) -> Chunk every 3 digits.
-     Enum.join(",") -> Using "," in order to add comma.
-     String.reverse() -> Finally reversing the order.
+     Integer.to_charlist(12345677) -> '1234567'
+     |> Enum.reverse() -> '7654321'
+     |> Enum.chunk_every() -> ['765', '432', '1']
+     |> Enum.join(",") -> "765,432,1"
+     |> String.reverse() -> "1,234,567"
   """
   def format_population(integer) do
     integer
